@@ -1,4 +1,4 @@
-package Zoo;
+package HomeworkTwo.Zoo;
 
 public class Main {
     public static void time(Time t) {

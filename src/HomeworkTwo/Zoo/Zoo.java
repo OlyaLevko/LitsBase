@@ -1,4 +1,4 @@
-package Zoo;
+package HomeworkTwo.Zoo;
 
 public class Zoo {
     public final int id;

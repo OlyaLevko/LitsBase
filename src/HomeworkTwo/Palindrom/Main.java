@@ -1,4 +1,4 @@
-package Palindrom;
+package HomeworkTwo.Palindrom;
 
 public class Main {
 
@@ -26,7 +26,7 @@ public class Main {
 
     public static void main(String[] args) {
         if(isPalindrom("Біб"))
-            System.out.println("Palindrom");
+            System.out.println("HomeworkTwo");
         else
             System.out.println("Not palindrom");
     }

@@ -1,4 +1,4 @@
-package ReversArray;
+package HomeworkTwo.ReversArray;
 
 public class Main {
     public static int[] reversal(int[] array) {
