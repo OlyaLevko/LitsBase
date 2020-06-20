@@ -11,7 +11,19 @@ public class Time {
         }
         else System.out.println("Time is not correct");
     }
-    public void time(Time t){
-        System.out.println(t.hour + ":" + t.minutes);
+    public void time(){
+        if (hour>0 && hour <10) {
+            System.out.print("0" + hour + ":" );
+        }
+        else{
+            System.out.print(hour + ":");
+        }
+        if (minutes>=0 && minutes<10){
+            System.out.println("0" + minutes);
+        }
+        else{
+            System.out.println(minutes);
+        }
     }
+
 }
