@@ -4,30 +4,29 @@ public class Main {
 
     public static boolean isPalindrom(String word) {
         word = word.toLowerCase();
-        int l = word.length();
-        char[] array = new char[l];
-        for (int i = 0; i < l; i++) {
-            array[i] = word.charAt(i);
+        char[] array = word.toCharArray();
 
-        }
         boolean x = false;
-        for (int j = 0; j < l / 2; ) {
-            if (array[j]== array[l - 1 - j]) {
-                j++;
-                x = true;
-            } else {
-                x = false;
-                j = l;
-            }
+        for (int i = 0, j = word.length() -1; i < word.length() && j<word.length(); i++,j--) {
+                if (array[i] == array[j]){
+                    x = true;
+                }
+                else {
+                    x = false;
+                    System.out.println("Isn't palindrom");
+                    break;
+                }
+        }
+        if (x == true){
+            System.out.println("Palindrom");
         }
         return x;
     }
 
 
+
     public static void main(String[] args) {
-        if(isPalindrom("Біб"))
-            System.out.println("HomeworkTwo");
-        else
-            System.out.println("Not palindrom");
+        isPalindrom("Каша");
+
     }
 }
