@@ -3,16 +3,15 @@ package HomeworkFive;
 public class Sedan extends Car {
     private int maxSpeed;
 
-    public Sedan(String model, int releaseDate, double engineCapacity, int maxSpeed) {
-        super(model, releaseDate, engineCapacity);
+    public Sedan(String model, int releaseDate, int engineID, int maxSpeed) {
+        super(model, releaseDate, engineID);
         this.maxSpeed = maxSpeed;
     }
 
     @Override
     public void carInfo() {
         System.out.println("Type: Sedan. Model: " + this.getModel() + ". Release date: " +
-                + this.getReleaseDate() + ". Engine capacity: " +
-                + this.getEngineCapacity() + ". Max speed: " + maxSpeed + ".");
+                + this.getReleaseDate() + ". Max speed: " + maxSpeed + ".");
     }
 
     public int getMaxSpeed() {
@@ -26,13 +25,4 @@ public class Sedan extends Car {
             System.out.println("Check please if you set the max speed correctly");
     }
 
-    @Override
-    public void setEngineCapacity(double engineCapacity) {
-        if(engineCapacity<10)
-        super.setEngineCapacity(engineCapacity);
-        else
-            System.out.println("Check please if you set the engine capacity correctly");
-
-
-    }
 }

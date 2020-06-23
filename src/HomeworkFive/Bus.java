@@ -3,23 +3,17 @@ package HomeworkFive;
 public class Bus extends Car{
     private int maxNumberOfPassengers;
 
-    public Bus(String model, int releaseDate, double engineCapacity, int maxNumberOfPassengers) {
-        super(model, releaseDate, engineCapacity);
+    public Bus(String model, int releaseDate, int engineID, int maxNumberOfPassengers) {
+        super(model, releaseDate, engineID);
         this.maxNumberOfPassengers = maxNumberOfPassengers;
     }
 
     @Override
     public void carInfo() {
         System.out.println("Type: Bus. Model: " + this.getModel() + ". Release date: " +
-                + this.getReleaseDate() + ". Engine capacity: " +
-                + this.getEngineCapacity() + ". Max number of passengers: " + maxNumberOfPassengers + ".");
+                + this.getReleaseDate() + ". Max number of passengers: " + maxNumberOfPassengers + ".");
     }
 
-    @Override
-    public void setEngineCapacity(double engineCapacity) {
-        if(engineCapacity>5 && engineCapacity<40)
-            super.setEngineCapacity(engineCapacity);
-    }
 
     public int getMaxNumberOfPassengers() {
         return maxNumberOfPassengers;
