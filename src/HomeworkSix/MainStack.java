@@ -10,27 +10,20 @@ public class MainStack {
         Magazine magazine2 = new Magazine("Time", "News", 70000);
         Magazine magazine3 = new Magazine("BusinessWeek", "Business", 50000);
         Magazine magazine4 = new Magazine("Eurofootball", "Sport", 60000);
-        Stack <Magazine> stackOfMagazine = new Stack<>();
+        myStack<Magazine> stack = new myStack<>(10);
+        stack.add(magazine1);
+        stack.add(magazine2);
+        stack.add(magazine3);
+        stack.add(magazine4);
+        Iterator<Magazine> it = stack.iterator();
 
-        stackOfMagazine.push(magazine1);
-        stackOfMagazine.push(magazine2);
-        stackOfMagazine.push(magazine3);
-        stackOfMagazine.push(magazine4);
+        stack.add(2, magazine4);
 
-        stackOfMagazine.sort(Magazine::compareTo);
-        for (Magazine m: stackOfMagazine) {
-            System.out.println(m.title + m.edition);
-        }
-       CommonIterator<Magazine> iterator = new CommonIterator<>(stackOfMagazine);
+        System.out.println(stack.get(2).title);
 
-        while(iterator.hasNext()){
-            System.out.println(iterator.next().title);
-        }
-        System.out.println("____________________");
-        for (Magazine m: stackOfMagazine) {
+        for (Magazine m: stack) {
             System.out.println(m.title);
         }
-
 
 
 
